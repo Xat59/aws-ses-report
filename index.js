@@ -6,7 +6,7 @@ var https = require('https');
 var agent = new https.Agent({maxSockets: 150});
 var fs = require('fs');
 var queueURL = process.env.QueueURL;
-var toddresses = process.env.ToAddr;
+var toddresses = process.env.ToAddr.split(",");
 var srcaddr = process.env.SrcAddr;
 var bucket = process.env.BucketName;
 var prefix = process.env.BucketPrefix;
@@ -46,7 +46,7 @@ exports.handler = (event, context, callback) => {
         //console.log("message: " +  messages);
         var params = {
             Destination: {
-                ToAddresses: [toddresses,]
+                ToAddresses: toddresses
             },
             Message: {
                 Body: {
