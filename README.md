@@ -1,10 +1,22 @@
 # AWS SES Report
-#### Dashboard for SES (Simple Email Service) to track deliveries, bounces and complaints
 
-Created from: https://aws.amazon.com/blogs/ses/creating-a-daily-dashboard-to-track-bounces-and-complaints/
+**Simple Dashboard for AWS SES (Simple Email Service) to track deliveries, bounces and complaints mails.**
 
-This version includes deliveries, from-email and subject.
+Currently it only contains the lambda function code in order to create a dashboard. Please take a look at the roadmap section.
 
-![alt text](https://raw.githubusercontent.com/Bikstok/AWS-SES-Report/master/ses-report.jpg)
+Dashboard looks like :
 
-![alt text](https://d2908q01vomqb2.cloudfront.net/632667547e7cd3e0466547863e1207a8c0c0c549/2017/06/20/SES-Blog_Bounce-Complaint-Dashboard-Architecture-1024x758.png)
+![alt text](ses-report.jpg)
+
+AWS resources you need to get this dashboard working :
+
+![alt text](ses-infra.png)
+
+## Roadmap
+
+- create a terraform module that creates the mandatories AWS resources in one-shot (such as SES, SNS, SQS, Lambda, S3 bucket and Cloudwatch Schedule Event).
+
+## Thanks
+
+- Idea : https://aws.amazon.com/blogs/ses/creating-a-daily-dashboard-to-track-bounces-and-complaints/
+- Nodejs code : https://github.com/Morning-Train/AWS-SES-Report
