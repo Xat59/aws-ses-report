@@ -19,4 +19,4 @@ AWS resources you need to get this dashboard working :
 ## Thanks
 
 - Idea : https://aws.amazon.com/blogs/ses/creating-a-daily-dashboard-to-track-bounces-and-complaints/
-- Nodejs code : https://github.com/Morning-Train/AWS-SES-Report
+- Initial dashboard code : https://github.com/Morning-Train/AWS-SES-Report
